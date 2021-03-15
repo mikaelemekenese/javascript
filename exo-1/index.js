@@ -1,3 +1,5 @@
-var person = {}
+var nom = 'Doe';
+var prénom = 'John';
+var ville = 'New-York';
 
-console.log(person);
+alert('Nom: ' + nom + '\n' + 'Prénom: ' + prénom + '\n' + 'Ville: ' + ville);

@@ -1,7 +1,5 @@
-var person = {
-    Nom: "Doe",
-    Prénom: "John",
-    Ville: "New-York"
-};
+var nom = 'Doe';
+var prénom = 'John';
+var ville = 'New-York';
 
-prompt("Bonjour, ", [person.Prénom]);
+prompt("Bonjour, ", prénom);
