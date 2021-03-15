@@ -1,7 +1,7 @@
 var person = {
-    lastName: "Doe",
-    firstName: "John",
-    city: "New-York"
+    Nom: "Doe",
+    Prénom: "John",
+    Ville: "New-York"
 };
 
 console.log(person);
