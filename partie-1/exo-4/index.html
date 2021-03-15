@@ -12,6 +12,18 @@
             <button  name="submit" id="submit">Valider</button>
         </form>
 
-        <script type="text/javascript" src="index.js"></script>
+        <script>
+            myFunction = function() {
+                var lastName = document.getElementById("firstname").value;
+                var firstName = document.getElementById("lastname").value;
+                var city = document.getElementById("city").value;
+            
+            alert('Nom: ' + lastName + '\n' + 'Prénom: ' + firstName+ '\n' + 'Ville: ' + city);
+            };
+
+            myFunction();
+
+            /* document.getElementById("here").innerHTML =  */
+        </script>
     </body>
 </html>
