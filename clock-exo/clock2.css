@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Digital 7';
+    src: url('digital-7.mono.ttf') format('truetype');
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Digital 7';
+}
+
+#clock {
+	height: 100vh;
+	width: 100%;
+	background-color: white;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 200px;
+}
