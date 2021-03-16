@@ -17,7 +17,7 @@ let showTime = () => {
     mins = mins < 10 ? "0" + mins : mins;
     secs = secs < 10 ? "0" + secs : secs;
   
-    let time = `${hrs}:${mins}:${secs}:${period}`;
+    let time = hrs + ":" + mins + ":" + secs + ' ' + period;
     setInterval(showTime, 1000);
     document.getElementById("clock").innerHTML = time;
 };
