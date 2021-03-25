@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_5</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <form>
+            <label for="firstNumber">Premier nombre : </label><input type="text" id="firstNumber" name="firstNumber"/><br/>
+            <label for="secondNumber">Deuxième nombre : </label><input type="text" id="secondNumber" name="secondNumber"/><br/>
+            <button  id="submit" name ="submit">Valider</button>
+        </form>
+
+        <script>
+            let submitBtn = document.getElementById('submit');
+            let firstNumber = document.getElementById('firstNumber');
+            let secondNumber = document.getElementById('secondNumber');
+
+            submitBtn.addEventListener('click', function() {
+                alert('Résultat : ' + parseInt(firstNumber.value) * parseFloat(secondNumber.value));
+            });
+        </script>
+    </body>
+</html>
