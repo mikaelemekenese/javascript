@@ -12,7 +12,9 @@
         <script>
             let name = document.getElementById('lastname');
 
-            
+            name.addEventListener('focusout', function() {
+                alert('Merci de votre participation !');
+            });
         </script>
     </body>
 </html>
