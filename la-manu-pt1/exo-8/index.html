@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_8</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <form>
+            <label for="age">Votre âge : </label><input type="text" id="age" name="age"/><br/>
+            <button id="submit" name="submit">Valider</button>
+        </form>
+
+        <script>
+            let submitBtn = document.getElementById('submit');
+            let age = document.getElementById('age');
+
+            submitBtn.addEventListener('click', function() {
+                if (isNaN(age.value)) {
+                    alert('Veuillez entrer un nombre !');
+                } else if (age.value > 125) {
+                    alert('Impossible ! Veuillez entrer un nombre valide !');
+                } else if (age.value >= 18) {
+                    alert('Vous êtes majeur !');    
+                } else {
+                    alert('Vous êtes mineur !');
+                }
+            });
+        </script>
+    </body>
+</html>
