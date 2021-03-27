@@ -11,4 +11,17 @@
       <img src="images/image4.jpg" id="image4" />
       <img src="images/image5.jpg" id="image5" />
   </body>
+
+  <script>
+      let image = document.querySelectorAll('img');
+
+      for (let i = 0; i < image.length; i++) {
+          image[i].addEventListener('mouseover', function() {
+              image[i].src = 'images/image' + (i+1) + '_2.jpg';
+          });
+          image[i].addEventListener('mouseout', function() {
+              image[i].src = 'images/image' + (i+1) + '.jpg';
+          });
+      };    
+  </script>
 </html>

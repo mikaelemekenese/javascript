@@ -16,12 +16,11 @@
         <script>
             let image = document.querySelectorAll('img');
 
-            for (i = 0; i < image.length; i++) {
+            for (let i = 0; i < image.length; i++) {
                 image[i].addEventListener('mouseover', function() {
-                  
+                    image[i].src = 'images/image' + (i+1) + '_2.jpg';
                 });
-            };
-            
+            };    
         </script>
     </body>
 </html>
