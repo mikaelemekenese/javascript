@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDo List</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <form id="myForm">
+            <input type="text" name="task" placeholder="Ajouter une tache">
+            <button type="submit">Ajouter</button>
+        </form>
+        <ul id="myList"></ul>
+
+        <script>
+            const myForm = document.getElementById("myForm");
+            const myList = document.getElementById("myList");
+
+            myForm.addEventListener('submit', function (event) {
+                // Stop "form" myForm to submit
+                event.preventDefault();
+
+                // Make input "task" as variable
+                const task = event.target.task;
+
+                // Check if input "task" has value
+                if (task.value != '') {
+                    // Create "li" and add to "ul" myList
+                    const li = document.createElement('li');
+                    li.innerText = task.value;
+                    myList.appendChild(li);
+
+                    // Create delete "button" and add to "li"
+                    const btn = document.createElement('button');
+                    btn.innerText = 'Supprimer';
+                    li.appendChild(btn);
+
+                    // Add listener to "button" to remove task
+                    btn.addEventListener('click', function() {
+                        myList.removeChild(li);
+                    });
+                }
+
+                // Clean "input" task
+                task.value = '';
+            });
+        </script>
+    </body>
+</html>
