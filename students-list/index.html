@@ -5,16 +5,31 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
         <title>Students List</title>
+
+        <style>
+            #mytable, td {
+                margin: 20px;
+                border: 1px solid grey;
+                text-align: center;
+                padding: 5px;
+            }
+
+            #mytable img {
+                width: 70px;
+            }
+        </style>
     </head>
 
     <body>
-        <div class="col-lg-12" id="students-list">Students List :
-            <!-- Insert my list here -->                              
+        <div id="students-list"> 
         </div>
 
         <script src="students.js"></script>
-        <script src="app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="table.js"></script>
     </body>
 
 </html>
