@@ -9,27 +9,54 @@
         <title>Students List</title>
 
         <style>
-            #mytable, td {
+            h1 {
+                text-align: center;
+                padding: 30px;
+            }
+
+            table {
+                margin: auto;
+            }
+
+            th, td {
                 margin: 20px;
                 border: 1px solid grey;
                 text-align: center;
                 padding: 5px;
             }
 
-            #mytable img {
+            img {
                 width: 70px;
+            }
+
+            th {
+                text-align: center;
+                color:rgb(53, 130, 231);
+            }
+
+            th button {
+                margin: 10px;
             }
         </style>
     </head>
 
     <body>
-        <div id="students-list"> 
-        </div>
+        <h1>Students List</h1>
+
+        <table id='table'>
+            <tr>
+                <th>ID</th>
+                <th>Avatar</th>
+                <th>Name</th>
+                <th>Created on</th>
+                <th><button type=button class=btn-success style="border-radius:5px";>Add a student</button></th>
+            </tr>
+        </table>
 
         <script src="students.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-        <script src="table.js"></script>
+        <script src="table-json.js"></script>
     </body>
 
 </html>
