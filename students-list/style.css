@@ -1,0 +1,25 @@
+.list {
+    padding: 10px;
+  }
+  
+  .list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid lightgray;
+    align-items: center;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+  }
+  
+  .name {
+    text-align: left;
+    width: 30%;
+  }
