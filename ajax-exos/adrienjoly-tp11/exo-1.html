@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TP 11 - Exercice 1</title>
+    </head>
+
+    <body>
+
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://httpbin.org/ip');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    alert(xhr.responseText);
+                }
+            };
+            xhr.send();
+        </script>
+    </body>
+
+</html>

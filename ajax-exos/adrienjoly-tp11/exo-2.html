@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TP 11 - Exercice 2</title>
+    </head>
+
+    <body>
+        <form id="weather">
+            <label for="city">Ville : </label>
+            <input type="text" id="city" placeholder="Entrez le nom d'une ville">
+            <button id="button" type="submit">OK</button>
+        </form>
+
+        <script>
+            let form = document.getElementById('weather');
+            let city = document.getElementById('city');
+
+            console.log('form');
+            console.log('city');
+
+            form.addEventListener('submit', function(event) {
+
+                event.preventDefault();
+
+                console.log(city.value);
+
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?q=' + city.value + '&appid=ed55bfef462182bc9cc43c09d3cbab05');
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        var reponse = JSON.parse(xhr.responseText);
+                        console.log(reponse);
+                    }
+                };
+                xhr.send();
+                
+            })
+        </script>
+    </body>
+
+</html>
