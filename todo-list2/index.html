@@ -5,18 +5,18 @@
         <meta charset="UTF-8" />
     </head>
     <body>
-        <form id="myForm">
+        <form id="form">
             <input type="text" name="task" placeholder="Ajouter une tache">
             <button type="submit">Ajouter</button>
         </form>
         <ul id="myList"></ul>
 
         <script>
-            const myForm = document.getElementById("myForm");
+            const form = document.getElementById("form");
             const myList = document.getElementById("myList");
 
-            myForm.addEventListener('submit', function (event) {
-                // Stop "form" myForm to submit
+            form.addEventListener('submit', function (event) {
+                // Stop "form" form to submit
                 event.preventDefault();
 
                 // Make input "task" as variable

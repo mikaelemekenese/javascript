@@ -8,41 +8,43 @@
     </head>
 
     <body>
-        <div>
-            <form id="form">
-                <label for="search">Votre recherche : </label>
-                <input type="text" id="search">
-                <button id="button" type="submit">OK</button>
-            </form>
+        <form id="form">
+            <input type="search" name="search" id="search">
+            <input type="submit" name="submit" value="search">
+        </form>
 
-            <img/>
-        </div>
-
+        <div id="images"></div>
+        
         <script>
-            let form = document.getElementById('form');
-            let search = document.getElementById('search');
+            var key = "";
+            var form = document.getElementById('form');
+            var search = document.getElementById("search");
+            var images = document.getElementById("images");
 
-            console.log('form');
-            console.log('search');
+            form.addEventListener('submit', searchGiphy);
+            search.addEventListener('keyup', searchGiphy);
+            
+            function searchGiphy(event) {
 
-            form.addEventListener('submit', function(e) {
+                event.preventDefault();
 
-                e.preventDefault();
+                images.innerHTML = '';
 
-                console.log(search.value);
-
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=74a9b070d21072ccac3a7b5f44f09efa&tags=' + encodeURIComponent(search.value) + '&format=json&nojsoncallback=1');
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === 4) {
-                        let reponse = JSON.parse(xhr.responseText);
-                        let image = 
-                        console.log(reponse);
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var results = JSON.parse(this.responseText);
+                        results.data.forEach(function(element) {
+                            var img = document.createElement('img');
+                            img.src = element.images['480w_still'].url;
+                            images.appendChild(img);
+                        });
                     }
                 };
-                xhr.send();
-            })
+
+                xhttp.open("GET", "http://api.giphy.com/v1/gifs/search?q=" + search.value + "&api_key=HHnBsP7l7H2GuzJ1UAz80Z6DMqH3NFw6", true);
+                xhttp.send();
+            }
         </script>
     </body>
-
 </html>
